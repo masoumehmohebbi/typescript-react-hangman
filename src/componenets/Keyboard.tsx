@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 const KEYS = [
   "a",
@@ -28,29 +27,39 @@ const KEYS = [
   "y",
   "z",
 ]
+ type KeyboardProps = {
+  setGuessedLetters:string[]
+  activeKey:string[]
+  UnactiveKey:string[]
+ }
+function Keyboard({setGuessedLetters,activeKey,UnactiveKey}:KeyboardProps) {
 
-function Keyboard({setGuessedLetters}) {
- const [isDisabled, setIsDisabled] = useState<boolean>(false);
-
-  const handleClick=(key,e)=>{
+  const handleClick=(key:string, e:React.MouseEvent<HTMLButtonElement>)=>{
     setGuessedLetters((prev)=>[...prev,key])
     e.currentTarget.disabled = true;
-    setIsDisabled((is)=>!is)
+    // e.currentTarget.style.color="gray"
+
   }
   return (
-    <div className="grid grid-cols-9 w-[70%] mx-auto">
-      {KEYS.map((key)=>(
-        <button 
-        // disabled={isDisabled}
-        onClick={(e)=>handleClick(key,e)}
-        className={`
-        ${isDisabled && "text-gray-400"}
-        col-span-1 rounded-md font-bold teact-slate-800 aspect-square border m-1 border-yellow-600 text-lg capitalize`}
-        key={key}>
-          {key}
-          </button>
-      ))}
-    </div>
+
+<div className="grid grid-cols-9 w-[70%] mx-auto mt-11">
+  {KEYS.map((key)=>{
+      const isActive = activeKey.includes(key)
+      const unActive = UnactiveKey.includes(key)
+      
+
+  return  <button 
+    // disabled={isDisabled}
+    onClick={(e)=>handleClick(key,e)}
+    className={` ${isActive && "!text-green-500 opacity-60"}
+    ${unActive && "!text-red-500 opacity-60"}
+    col-span-1 rounded-md font-bold text-slate-800 aspect-square border m-1 border-yellow-600 text-lg capitalize`}
+    key={key}>
+      {key}
+      </button>
+})}
+</div>
+
   )
 }
 
