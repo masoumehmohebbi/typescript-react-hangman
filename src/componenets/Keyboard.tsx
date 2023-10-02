@@ -44,7 +44,7 @@ function Keyboard({setGuessedLetters,activeKey,UnactiveKey,isLoser,isWinner}:Key
   
   return (
 
-<div className="grid grid-cols-9 w-11/12 md:w-[70%] mx-auto mt-11">
+<div className="grid grid-cols-9 w-11/12 md:w-[70%] mx-auto my-11">
   {KEYS.map((key)=>{
       const isActive = activeKey.includes(key)
       const unActive = UnactiveKey.includes(key)
