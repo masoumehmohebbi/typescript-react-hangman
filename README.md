@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# Typescript React Hangman App
 
 <figure>
   <img src="https://github.com/masoumehmohebbi/typescript-react-hangman/blob/main/typescript-react-hangman-IMG1.jpeg"/>
