@@ -1,5 +1,5 @@
   const HEAD = (
-    <div className="absolute border-t-8 border-red-900 p-1 px-2 flex items-center flex-col bg-yellow-500 w-11 h-11 top-10 md:top-[2.6rem] rounded-full left-[calc(100%_-_2rem)] md:left-[calc(100%_+_1.8rem)]">
+    <div className="absolute border-t-8 border-red-900 p-1 px-2 flex z-50 items-center flex-col bg-yellow-500 w-11 h-11 top-11 md:top-[2.6rem] rounded-full left-[calc(100%_-_2.2rem)] md:left-[calc(100%_+_1.8rem)]">
       <div className="w-full justify-between flex items-center">
         <span className="w-2 h-2 bg-blue-700 rounded-full"></span>
         <span className="w-2 h-2 bg-blue-700 rounded-full"></span>
