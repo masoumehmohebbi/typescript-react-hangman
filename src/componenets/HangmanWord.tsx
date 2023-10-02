@@ -18,7 +18,7 @@ type HangmanWordProps = {
 }
 {!isLoser && !isWinner && <h1 className="uppercase text-center md:text-2xl text-slate-800 mt-11 md:mt-3 mb-11 ml-4 min-[400px]:ml-0">hey, wish u good luck! 👾</h1>}
   
-      <div className="mx-auto mt-12">
+      <div className="mx-auto mt-16">
   
         {wordToGuess.split("").map((w, index) => (
          <span key={index}  className="border-b-2 border-slate-600 mx-3 px-1">
