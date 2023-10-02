@@ -42,7 +42,7 @@ function Keyboard({setGuessedLetters,activeKey,UnactiveKey}:KeyboardProps) {
   }
   return (
 
-<div className="grid grid-cols-9 w-[70%] mx-auto mt-11">
+<div className="grid grid-cols-9 w-11/12 md:w-[70%] mx-auto mt-11">
   {KEYS.map((key)=>{
       const isActive = activeKey.includes(key)
       const unActive = UnactiveKey.includes(key)
@@ -53,7 +53,7 @@ function Keyboard({setGuessedLetters,activeKey,UnactiveKey}:KeyboardProps) {
     onClick={(e)=>handleClick(key,e)}
     className={` ${isActive && "!text-green-500 opacity-60"}
     ${unActive && "!text-red-500 opacity-60"}
-    col-span-1 rounded-md font-bold text-slate-800 aspect-square border m-1 border-yellow-600 text-lg capitalize`}
+    col-span-1 bg-yellow-100 duration-500 hover:scale-105 transition-all ease-in-out rounded-md font-bold text-slate-800 aspect-square border m-1 border-yellow-600 text-lg capitalize`}
     key={key}>
       {key}
       </button>
