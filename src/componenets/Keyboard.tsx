@@ -31,13 +31,19 @@ const KEYS = [
   setGuessedLetters:string[]
   activeKey:string[]
   UnactiveKey:string[]
+  isLoser:boolean
  }
-function Keyboard({setGuessedLetters,activeKey,UnactiveKey}:KeyboardProps) {
+function Keyboard({setGuessedLetters,activeKey,UnactiveKey,isLoser}:KeyboardProps) {
 
   const handleClick=(key:string, e:React.MouseEvent<HTMLButtonElement>)=>{
     setGuessedLetters((prev)=>[...prev,key])
     e.currentTarget.disabled = true;
     // e.currentTarget.style.color="gray"
+
+    if (isLoser) {
+      console.log(e);
+      
+    }
 
   }
   return (
@@ -49,10 +55,15 @@ function Keyboard({setGuessedLetters,activeKey,UnactiveKey}:KeyboardProps) {
       
 
   return  <button 
+    disabled={isLoser}
     // disabled={isDisabled}
     onClick={(e)=>handleClick(key,e)}
     className={` ${isActive && "!text-green-500 opacity-60"}
     ${unActive && "!text-red-500 opacity-60"}
+
+    ${isLoser && "opacity-40"}
+
+   
     col-span-1 bg-yellow-100 duration-500 hover:scale-105 transition-all ease-in-out rounded-md font-bold text-slate-800 aspect-square border m-1 border-yellow-600 text-lg capitalize`}
     key={key}>
       {key}
