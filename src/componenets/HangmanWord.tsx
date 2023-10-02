@@ -11,7 +11,7 @@ type HangmanWordProps = {
     return (
   <>
   {isLoser &&
-  <h1 className="uppercase text-center md:text-2xl text-slate-800 mt-11 md:mt-3 mb-11 ml-4 min-[400px]:ml-0">nice try, refresh to try agian! 😵</h1>
+  <h1 className="uppercase text-center md:text-2xl text-slate-800 mt-11 md:mt-3 mb-11 ml-4 min-[400px]:ml-0">nice try, <a href="#" onClick={()=>window.location.reload()} className="text-orange-600 font-semibold">Click here</a> to try agian! 😵</h1>
 }
 {isWinner &&
   <h1 className="uppercase text-center md:text-2xl text-slate-800 mt-11 md:mt-3 mb-11 ml-4 min-[400px]:ml-0">Winner!!, <a onClick={()=>window.location.reload()} className="text-orange-600 font-semibold" href="#">Click here</a> to try agian! 🎉</h1>
