@@ -19,7 +19,7 @@
     <div className=" absolute bg-yellow-500 w-2 -rotate-[60deg] origin-bottom-right h-16 top-16 left-[calc(100%_-_1rem)] md:left-[calc(100%_+_3rem)]"></div>
   )
   const LEFT_FOOT = (
-    <div className=" absolute bg-yellow-500 w-2 -rotate-[134deg] origin-bottom-right h-16 top-[91px]  left-[calc(100%_-_1.1rem)] md:left-[calc(100%_+_2.7rem)]"></div>
+    <div className=" absolute bg-yellow-500 w-2 -rotate-[134deg] origin-bottom-right h-16 top-[90px]  left-[calc(100%_-_1.3rem)] md:left-[calc(100%_+_2.7rem)]"></div>
   )
   const RIGHT_FOOT = (
     <div className=" absolute bg-yellow-500 w-2 rotate-[134deg] origin-bottom-left h-16 top-[91px]  left-[calc(100%_-_0.7rem)] md:left-[calc(100%_+_3.4rem)]"></div>
